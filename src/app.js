@@ -2,9 +2,6 @@
     first config to start app
 */
 
-
-
-
 //initial server configs
 const express = require('express');
 const app = express();
@@ -13,8 +10,6 @@ const morgan = require('morgan');
 
 //to enable http request 
 const cors = require('cors');
-
-
 
 
 app.use(express.urlencoded({

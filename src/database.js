@@ -1,12 +1,13 @@
 /*
     3th config to start app
 */
-
 const mongoose = require('mongoose');
+require('./config/config');
 
 async function connect() {
 
-    await mongoose.connect('mongodb://localhost:27017/fakerusersflutter', {
+    const urldb = process.env.BACKENDURL || process.env.BACKENDLOCALURL;
+    await mongoose.connect(urldb, {
         // dbName: 'fakerusersflutter',
         // useFindAndModify: false,
         // useCreateIndex: true,

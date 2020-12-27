@@ -33,7 +33,7 @@ async function main() {
         // connection db
         // await connect();
         //express application.
-        app.listen(4000);
+        app.listen(process.env.PORT || 4000);
         // await httpServer.listen(process.env.PORT || 4000);
         // httpsServer.listen(process.env.httpsServer);
         // console.log('server on port 4000 Connected');

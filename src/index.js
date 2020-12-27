@@ -1,6 +1,7 @@
 /*
     second config to start app
 */
+require('./config/config');
 const app = require('./app');
 
 const { connect } = require('./database');
@@ -25,13 +26,15 @@ async function main() {
     //     key: fs.readFileSync(`${path.resolve()}\\sslcert\\serverkey.pem`, 'utf-8'),
     //     cert: fs.readFileSync(`${path.resolve()}\\sslcert\\servercert.pem`, 'utf-8')
     // }, app);
-
+    console.log('---------process.env.PORT---------');
+    console.log(process.env.LOCALPORT);
+    console.log('---------process.env.PORT---------');
     try {
         // connection db
         await connect();
         //express application.
         // await app.listen(4000);
-        await httpServer.listen(process.env.httpServer);
+        await httpServer.listen(process.env.PORT || 4000);
         // httpsServer.listen(process.env.httpsServer);
         // console.log('server on port 4000 Connected');
     } catch (error) {

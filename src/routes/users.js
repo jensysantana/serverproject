@@ -7,6 +7,11 @@ const User = require('../models/User');
 const faker = require('faker');
 const { fake } = require('faker');
 
+router.get('/', async(req, res) => {
+    const users = await User.find();
+    return res.status(200).json({ users });
+});
+
 router.get('/api/v1/users', async(req, res) => {
     const users = await User.find();
     return res.status(200).json({ users });

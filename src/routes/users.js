@@ -6,13 +6,13 @@ const router = Router();
 const User = require('../models/User');
 const faker = require('faker');
 
-router.get('/', async(req, res) => {
-    return res.status(200).json({
-        users: {
-            name: 'jensy santana'
-        }
-    });
-});
+// router.get('/', async(req, res) => {
+//     return res.status(200).json({
+//         users: {
+//             name: 'jensy santana'
+//         }
+//     });
+// });
 
 router.get('/api/v1/users', async(req, res) => {
     const users = await User.find();

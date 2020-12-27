@@ -31,7 +31,7 @@ async function main() {
     // console.log('---------process.env.PORT---------');
     try {
         // connection db
-        // await connect();
+        await connect();
         //express application.
         app.listen(process.env.PORT || 4000);
         // await httpServer.listen(process.env.PORT || 4000);

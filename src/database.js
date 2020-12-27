@@ -24,8 +24,8 @@ async function connect() {
     // 'mongodb://localhost:27017/fakerusersflutter'
     await mongoose.connect(urlDb, {
         // dbName: 'fakerusersflutter',
-        // useFindAndModify: false,
-        // useCreateIndex: true,
+        useFindAndModify: false,
+        useCreateIndex: true,
         useNewUrlParser: true, //para que no muestre advertencia o error por pantalla.
         useUnifiedTopology: true
     });

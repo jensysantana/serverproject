@@ -4,7 +4,7 @@
 require('./config/config');
 const app = require('./app');
 
-const { connect } = require('./database');
+// const { connect } = require('./database');
 
 //file system and http server and https
 // const fs = require('fs');
@@ -31,7 +31,7 @@ async function main() {
     console.log('---------process.env.PORT---------');
     try {
         // connection db
-        await connect();
+        // await connect();
         //express application.
         // await app.listen(4000);
         await httpServer.listen(process.env.PORT || 4000);

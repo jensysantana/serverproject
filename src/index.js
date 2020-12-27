@@ -6,10 +6,10 @@ const app = require('./app');
 const { connect } = require('./database');
 
 //file system and http server and https
-const fs = require('fs');
-const path = require('path');
+// const fs = require('fs');
+// const path = require('path');
 const http = require('http');
-const https = require('https');
+// const https = require('https');
 // console.log(`${path.resolve()}\\sslcert\\serverkey.key`);;
 
 // const privateKey = fs.readFileSync(`${path.resolve()}\\sslcert\\serverkey.pem`, 'utf-8');

@@ -5,7 +5,6 @@ const { Router } = require('express');
 const router = Router();
 const User = require('../models/User');
 const faker = require('faker');
-const { fake } = require('faker');
 
 router.get('/', async(req, res) => {
     return res.status(200).json({

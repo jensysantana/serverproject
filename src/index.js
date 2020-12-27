@@ -19,7 +19,6 @@ const { connect } = require('./database');
 //     key: fs.readFileSync(`${path.resolve()}\\sslcert\\serverkey.pem`, 'utf-8'),
 //     cert: fs.readFileSync(`${path.resolve()}\\sslcert\\servercert.pem`, 'utf-8')
 // };
-
 async function main() {
     // const httpServer = http.createServer(app);
     // const httpsServer = https.createServer({
@@ -29,17 +28,17 @@ async function main() {
     // console.log('---------process.env.PORT---------');
     // console.log(process.env.LOCALPORT);
     // console.log('---------process.env.PORT---------');
-    try {
-        // connection db
-        await connect();
-        //express application.
-        app.listen(process.env.PORT || 4000);
-        // await httpServer.listen(process.env.PORT || 4000);
-        // httpsServer.listen(process.env.httpsServer);
-        // console.log('server on port 4000 Connected');
-    } catch (error) {
-        console.log(`server error index.js ${error}`);
-    }
+    // connection db
+    await connect();
+    // app.use('port', process.env.PORT || 4000);
+    //express application.
+    app.listen(process.env.PORT || 4000);
+    // await httpServer.listen(process.env.PORT || 4000);
+    // httpsServer.listen(process.env.httpsServer);
+    // 
+
 }
 
-main();
+main().then(() => {
+    console.log('server on port 4000 Connected');
+}).catch((error) => console.log(`server error index.js ${error}`));

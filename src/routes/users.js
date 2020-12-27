@@ -16,7 +16,7 @@ router.get('/', async(req, res) => {
 
 router.get('/api/v1/users', async(req, res) => {
     const users = await User.find();
-    return res.status(200).json({ users });
+    return res.status(200).json({ users: JSON.stringify(users) });
 });
 
 router.get('/api/v1/users/create', async(req, res) => {

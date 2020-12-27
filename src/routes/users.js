@@ -8,8 +8,11 @@ const faker = require('faker');
 const { fake } = require('faker');
 
 router.get('/', async(req, res) => {
-    const users = await User.find();
-    return res.status(200).json({ users });
+    return res.status(200).json({
+        users: {
+            name: 'jensy santana'
+        }
+    });
 });
 
 router.get('/api/v1/users', async(req, res) => {
